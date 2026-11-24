@@ -29,7 +29,7 @@ async function inscrever(id, email) {
       return [409, 'Este e-mail já está inscrito.'];
     }
 
-    if (inscritos.rowCount > oficina.rows[0].vagas) {
+    if (inscritos.rowCount >= oficina.rows[0].vagas) {
       return [409, 'Oficina lotada.'];
     }
 
